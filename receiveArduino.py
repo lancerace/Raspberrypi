@@ -1,9 +1,12 @@
 import RPi.GPIO as GPIO #controlling GPIO Pin for raspberry pi
 from lib_nrf24 import NRF24
+from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTShadowClient
 import time
 #download spidev library from wget https://github.com/Gadgettoid/py-spidev/archive/master.zip
 import spidev
 import json
+import logging
+
 
 '''
 set up GPIO numbering system in the format of BCM. 2 format available.
